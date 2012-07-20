@@ -1,0 +1,70 @@
+<apex:page controller="SprintWallController" sidebar="false">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script src="{!URLFOR($Resource.sprintwallres, 'jquery.ui.touch-punch.min.js')}"></script>
+		
+		<script src="{!URLFOR($Resource.sprintwallres, 'jquery.hotkeys.js')}"></script>
+		<script src="{!URLFOR($Resource.sprintwallres, 'jquery.stickytableheaders.js')}"></script>
+		<script src="{!URLFOR($Resource.sprintwallres, 'jquery.cookie.js')}"></script>
+		
+		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" title="default" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.sprintwallres, 'sprintwall.css')}" />
+		
+		<script type="text/javascript">
+			var arrowOutImg = "{!URLFOR($Resource.sprintwallres, 'arrow_out.png')}";
+			var arrowInImg = "{!URLFOR($Resource.sprintwallres, 'arrow_in.png')}";
+			var zoomImg = "{!URLFOR($Resource.sprintwallres, 'zoom.png')}";
+			var addImg = "{!URLFOR($Resource.sprintwallres, 'add.png')}";
+			var userAddImg = "{!URLFOR($Resource.sprintwallres, 'user_add.png')}";
+			var cogImg = "{!URLFOR($Resource.sprintwallres, 'cog.png')}";
+		</script>
+		<script src="{!URLFOR($Resource.sprintwallres, 'sprintwall.js')}"></script>
+	</head>
+	
+	<body>
+		<div id="header"><img src="{!URLFOR($Resource.sprintwallres, 'sprintwall.png')}" alt="" /> <span>Sprint Wall</span></div>
+		<div id="db" style="display: none"></div>
+		<div id="error"></div>
+		<div id="msg"></div>
+		<div id="editTask" style="display: none">
+			<table class="detailList" border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr><td class="labelCol"><label for="taskTitle">Title</label></td><td class="dataCol"><input id="taskTitle" maxlength="80" name="taskTitle" size="20" type="text" value=""></input></td></tr>
+					<tr><td class="labelCol"><label for="taskDesc">Description</label></td><td class="dataCol"><textarea id="taskDesc" name="taskDesc" cols="80" rows="5"></textarea></td></tr>
+					<tr><td class="labelCol"><label for="taskEst">Estimated Hrs</label></td><td class="dataCol"><input id="taskEst" maxlength="80" name="taskEst" size="20" type="text" value=""></input></td></tr>
+					<tr><td class="labelCol"><label for="taskRem">Remaining Hrs</label></td><td class="dataCol"><input id="taskRem" maxlength="80" name="taskRem" size="20" type="text" value=""></input></td></tr>
+					<tr><td class="labelCol"><label for="taskCategory">Category</label></td><td class="dataCol"><select id="taskCategory" name="taskCategory"></select></td></tr>
+					<tr><td class="labelCol"><label for="taskOwner">Owner</label></td><td class="dataCol"><select id="taskOwner" name="taskOwner"></select></td></tr>
+					<tr><td class="labelCol"><label for="taskPriority">Priority</label></td><td class="dataCol"><select id="taskPriority" name="taskPriority"></select></td></tr>
+				</tbody>
+			</table>
+			<input type="hidden" id="taskId" value=""></input>
+			<input type="hidden" id="taskStoryId" value=""></input>
+			<input type="hidden" id="taskVersion" value=""></input>
+		</div>
+		<div id="helpPage" style="display: none">
+			<p>The sprint wall allows you to manage and edit tasks within stories. You can choose the sprint and filter the tasks via the drop-down lists.</p>
+			<p>Expand the story by clicking the button to view all the tasks therein. Create and edit tasks inline (look for the '+' and cog buttons). Drag and drop tasks to change their status from 'Not Started', 'In Progress', etc.</p>
+			<p>Tasks are colour coded based on their category as follows:</p>
+			<table>
+				<tr><td class="nocategory">&nbsp;</td><td>No category</td></tr>
+				<tr><td class="analysis">&nbsp;</td><td>Analysis</td></tr>
+				<tr><td class="development">&nbsp;</td><td>Development</td></tr>
+				<tr><td class="design">&nbsp;</td><td>Design</td></tr>
+				<tr><td class="qa">&nbsp;</td><td>QA</td></tr>
+				<tr><td class="documentation">&nbsp;</td><td>Documentation</td></tr>
+				<tr><td class="bug">&nbsp;</td><td>Bug</td></tr>
+			</table>
+			<p>Happy coding! <img src="{!URLFOR($Resource.sprintwallres, 'emoticon_smile.png')}" alt=":)" /></p>
+		</div>
+		Sprint: <select id="sprintList"><option value="">Loading...</option></select> 
+		Team: <select id="teamList"><option value="">Loading...</option></select> 
+		Task Owner: <select id="personList"><option value="">Loading...</option></select> 
+		Category: <select id="categoryList"></select> 
+		<a id="refreshBtn" href="#" title="Refresh"><img src="{!URLFOR($Resource.sprintwallres, 'arrow_rotate_clockwise.png')}" alt="" /></a>
+		<span id="helpBtn"><a href="#" title="Help Me!"><img src="{!URLFOR($Resource.sprintwallres, 'help.png')}" alt="" /></a></span>
+		<div id="main"></div>
+	</body>
+
+</apex:page>

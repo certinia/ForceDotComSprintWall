@@ -1,0 +1,416 @@
+/*
+	Copyright 2012 FinancialForce.com.
+
+	This file is part of SprintWall.
+
+	SprintWall is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	SprintWall is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with SprintWall.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#header {
+	padding-bottom: 4px;
+}
+
+#header span {
+	position: relative;
+	top: -6px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+}
+
+#main {
+	border-top: 1px solid #cdcdcd;
+	margin: 10px 0;
+	position: relative;
+	height: 1%; overflow: hidden;
+}
+
+#refreshBtn img,
+#helpBtn img {
+	position: relative;
+	top: 2px;
+}
+
+#helpPage img {
+	position: relative;
+	top: 4px;
+}
+
+#helpBtn {
+	float: right;
+}
+
+div#helpPage table {
+	padding-left: 20px;
+}
+
+div#helpPage td,
+div#helpPage th {
+	padding: 4px;
+}
+
+#categoryColour {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-box-shadow: 2px 2px 1px #cdcdcd;
+	-webkit-box-shadow: 2px 2px 1px #cdcdcd;
+	box-shadow: 2px 2px 1px #cdcdcd;
+}
+
+div.story {
+	width: 110px;
+	overflow: hidden;
+	border: solid 1px #B9B9B9;
+	background-color: #efefef;
+	padding: 6px;
+	margin: 10px 10px 10px 0;
+	min-height: 40px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: 2px 2px 1px #cdcdcd;
+	-webkit-box-shadow: 2px 2px 1px #cdcdcd;
+	box-shadow: 2px 2px 1px #cdcdcd;
+}
+
+div.story .number {
+	float: left;
+	padding-right: 4px;
+}
+
+div.story .number:after {
+	content:  ": ";
+}
+
+div.story div.name {
+	word-wrap: break-word;
+	font-weight: bold;
+	padding-bottom: 8px;
+}
+
+div.story div.description {
+	float: left;
+}
+
+div.story .theme:before {
+	content: "Theme: ";
+}
+
+div.story .themepriority:before {
+	content: "Priority: ";
+}
+
+div.story .team:before {
+	content: "Team: ";
+}
+
+div.story .pointsalloc {
+	padding-bottom: 8px;
+}
+
+div.story .pointsalloc:before {
+	content: "Points (alloc): ";
+}
+
+div.story .view {
+	float: left;
+}
+
+div.story .view img,
+div.story .add img {
+	padding: 2px;
+}
+
+div.tasks {
+	margin-left: 200px;
+}
+
+div.task {
+	overflow: hidden;
+	width: 190px;
+	border-left: solid 6px blue;
+	border-top: solid 1px #B9B9B9;
+	border-right: solid 1px #B9B9B9;
+	border-bottom: solid 1px #B9B9B9;
+	background-color: white;
+	padding: 6px;
+	margin: 10px 0;
+	min-height: 40px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: 2px 2px 1px #cdcdcd;
+	-webkit-box-shadow: 2px 2px 1px #cdcdcd;
+	box-shadow: 2px 2px 1px #cdcdcd;
+	cursor: move;
+}
+
+div.task.nocategory {
+	border-left-color: magenta;
+}
+
+tr.contracted div.task.nocategory {
+	background-color: magenta;
+}
+
+#helpPage .nocategory,
+#editTask .nocategory {
+	background-color: magenta;
+}
+
+div.task.analysis {
+	border-left-color: grey;
+}
+
+tr.contracted div.task.analysis {
+	background-color: grey;
+}
+
+#helpPage .analysis,
+#editTask .analysis {
+	background-color: grey;
+}
+
+div.task.bug {
+	border-left-color: red;
+}
+
+tr.contracted div.task.bug {
+	background-color: red;
+}
+
+#helpPage .bug,
+#editTask .bug {
+	background-color: red;
+}
+
+div.task.development {
+	border-left-color: blue;
+}
+
+tr.contracted div.task.development {
+	background-color: blue;
+}
+
+#helpPage .development,
+#editTask .development {
+	background-color: blue;
+}
+
+div.task.design {
+	border-left-color: black;
+}
+
+tr.contracted div.task.design {
+	background-color: black;
+}
+
+#helpPage .design,
+#editTask .design {
+	background-color: black;
+}
+
+div.task.qa {
+	border-left-color: green;
+}
+
+tr.contracted div.task.qa {
+	background-color: green;
+}
+
+#helpPage .qa,
+#editTask .qa {
+	background-color: green;
+}
+
+div.task.documentation {
+	border-left-color: orange;
+}
+
+tr.contracted div.task.documentation {
+	background-color: orange;
+}
+
+#helpPage .documentation,
+#editTask .documentation {
+	background-color: orange;
+}
+
+div.task .name {
+	font-weight: bold;
+	padding-right: 4px;
+	float:  left;
+}
+
+div.task .description {
+	word-wrap: break-word;
+	font-style: italic;
+	margin: 8px 0px;
+}
+
+div.task .description {
+	word-wrap: break-word;
+}
+
+div.task .description:before,
+div.task .description:after {
+	content:  "\"";
+}
+
+div.task .estimate:before {
+	content: "Estimate: ";
+}
+
+div.task .remaining:before {
+	content: "Remaining: ";
+}
+
+div.task .estimate:after,
+div.task .remaining:after {
+	content: " hrs";
+}
+
+div.task .remaining {
+	float: left;
+}
+
+div.task .edit,
+div.task .view {
+	float: right;
+	padding: 2px;
+}
+
+div.task .ownerinfo {
+	margin: 6px 0;
+}
+
+div.task .ownerinfo img {
+	float: left;
+}
+
+div.task .owner {
+	padding-left: 20px;
+	padding-top: 2px;
+}
+
+.task.ui-sortable-helper {
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-moz-transform:rotate(3deg); /* Firefox */
+	-webkit-transform:rotate(3deg); /* Safari and Chrome */
+	-o-transform:rotate(3deg); /* Opera */
+}
+
+div.taskStoryId {
+	display: none;
+}
+
+table#sprintWall {
+	table-layout: fixed;
+	border-collapse:collapse;
+	width: 100%;
+}
+
+table#sprintWall th {
+	padding: 2px 0;
+}
+
+table#sprintWall th {
+	width: 17.5%;
+}
+
+table#sprintWall th.storyCol {
+	width: 10.5%;
+}
+
+table#sprintWall th.expanded {
+	width: 81.5%;
+}
+
+table#sprintWall th.contracted {
+	width: 1%;
+}
+
+table#sprintWall th.controlCol {
+	width: 2%;
+}
+
+.expandContract img {
+	padding: 12px 4px 0 0;
+}
+
+table#sprintWall tr {
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+}
+
+table#sprintWall tr.headerRow {
+	border-top: 0;
+}
+
+table#sprintWall th {
+	padding-left: 8px;
+	background-color: white;
+}
+
+table#sprintWall td {
+	vertical-align: top;
+}
+
+table.detailList {
+	width: 100%;
+	padding-top: 8px;
+}
+
+table.detailList td {
+	vertical-align: middle;
+}
+
+table.detailList td.labelCol {
+	width: 20%;
+	text-align: right;
+	padding-right: 16px;
+	color: #999;
+}
+
+table.detailList td.labelCol:after {
+	content: ":";
+}
+
+table.detailList td.dataCol {
+	width: 80%;
+}
+
+table.detailList input,
+table.detailList textarea {
+	border: solid 1px #cdcdcd;
+	width: 400px;
+}
+
+tr.contracted div.task {
+	width: 0;
+	padding: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 0;
+	float: left;
+	height: 20px;
+	margin-right: 2px;
+}
+
+tr.contracted div.story .team,
+tr.contracted div.story .view,
+tr.contracted div.story .add,
+tr.contracted div.story .pointsalloc,
+tr.contracted div.story .themepriority {
+	display: none;
+}

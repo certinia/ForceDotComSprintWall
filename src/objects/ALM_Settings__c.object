@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Disable_Agile_Task_History_Tracking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When enabled this will create history entries whenever the estimate or remaining hours are changed on an agile task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When enabled this will create history entries whenever the estimate or remaining hours are changed on an agile task.</inlineHelpText>
+        <label>Disable Agile Task History Tracking</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Max_Stories_On_Sprint_Wall__c</fullName>
+        <description>The maximum number of stories the sprint wall can handle showing at any one time. Set to zero for unlimited.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of stories the sprint wall can handle showing at any one time. Set to zero for unlimited.</inlineHelpText>
+        <label>Max Stories On Sprint Wall</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sprint Wall Settings</label>
+</CustomObject>

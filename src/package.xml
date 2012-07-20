@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Agile_Task_Hours_History__c-Agile Task Hours History Layout</members>
+        <members>Agile_Task_Hours_Remaining_History__c-Agile Task Hours Remaining History Layout</members>
+        <members>Agile_Task__c-Agile Task Layout</members>
+        <members>Sprint__c-Sprint Layout</members>
+        <members>Story__c-Story Layout</members>
+        <members>Team__c-Team Layout</members>
+        <members>Theme__c-Theme Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <version>24.0</version>
+</Package>
