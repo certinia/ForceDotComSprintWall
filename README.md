@@ -40,7 +40,7 @@ If you have any questions, thoughts or suggestions please [contact me](http://jo
 
 ## Licensing
 
-This code has been released under the GNU General Public License. See the associated [license.txt](license.txt) file for more details.
+This code has been released under the GNU General Public License. See the associated [license.txt](https://github.com/johnconners/ForceDotComSprintWall/blob/master/license.txt) file for more details.
 
 ## Included Libraries / Components
 
