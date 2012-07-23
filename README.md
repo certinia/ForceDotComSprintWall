@@ -12,11 +12,11 @@ Spin up an empty Salesforce.com developer org and push the contents of this repo
 
 Once up and running you can go directly to the 'Sprint Wall' tab and you'll see something like this (once you expand a story by clicking the green 'expand' button):
 
-> ![The Sprint Wall](sprintwall.png)
+> ![The Sprint Wall](https://github.com/johnconners/ForceDotComSprintWall/raw/master/sprintwall.png)
 
 You can drag and drop tasks between states (i.e. their respective columns) and that will update the 'Agile Task' 'Status' field behind the scenes. Click the magnifying glass on a task to view the underlying Salesforce object. Note that if you open the sprint wall in multiple browsers (or better still, multiple people have it open at the same time) then tasks moved between states will live update in front of your eyes within a couple of seconds. Likewise if someone changes the descriptions, owners, etc of agile tasks then those changes will automagically appear for anybody looking at the wall. If you click the 'cog' icon you can edit a task in a popup like so:
 
-> ![An Agile Task](agiletaskedit.png)
+> ![An Agile Task](https://github.com/johnconners/ForceDotComSprintWall/raw/master/agiletaskedit.png)
 
 Note that the category is colour coded so if you change the category (or someone else does) then the colour of the agile task 'card' will change to match.
 
