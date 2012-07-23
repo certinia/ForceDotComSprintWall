@@ -75,17 +75,6 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <webLinks>
-        <fullName>Sprint_Planner</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Sprint Planner</masterLabel>
-        <openType>noSidebar</openType>
-        <protected>false</protected>
-        <url>/apex/sprintplanner</url>
-    </webLinks>
-    <webLinks>
         <fullName>Sprint_Wall</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
