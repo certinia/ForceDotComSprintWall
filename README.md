@@ -1,5 +1,7 @@
 # force.com Sprint Wall
 
+**[Deploy to Salesforce](https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/ForceDotComSprintWall)**
+
 A drag and drop, live updating sprint wall built on the force.com platform using jQuery, jQuery UI and Javascript remoting to produce a web application in the mould of [Trello](http://trello.com) and [SeeNowDo](http://www.seenowdo.com). Note that I built a version of this for [FinancialForce.com](http://www.financialforce.com) to help manage their sprints in distributed teams scattered across the globe.
 
 It's intended as more of an example of what you can do on the force.com platform rather than a stand alone application.
